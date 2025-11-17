@@ -260,3 +260,56 @@
     font-size: 1.3rem;
   }
 }
+
+/* ---------------------------------------------- */
+/* Hero section styling with animated background  */
+/* ---------------------------------------------- */
+
+/* The hero section uses the provided background image and a subtle
+   fade/zoom animation on page load. It spans the full viewport
+   height and sits just below the header without overlapping
+   subsequent content. */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('background-amk.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  animation: heroFade 3s ease-in-out forwards;
+}
+
+/* Dark overlay to improve text and design contrast on top of the image */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+/* Animation for the hero section: fades in and gently zooms */
+@keyframes heroFade {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Adjust hero height on small screens to avoid taking too much vertical space */
+@media (max-width: 600px) {
+  .hero {
+    height: 60vh;
+  }
+}
