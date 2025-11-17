@@ -1,235 +1,262 @@
 /* Global styles */
-body {
-  margin: 0;
-  padding: 0;
-  /* Use a modern system font stack for a professional feel */
-  font-family: "Segoe UI", Tahoma, Helvetica, Arial, sans-serif;
-  /* Light pastel background reminiscent of modern study portals */
-  background-color: #f7faff;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-/* Header styles */
-header {
-  position: relative;
-  text-align: center;
-  /* Provide a fallback colour that blends with the page background while the image loads */
-  background-color: #e7effc;
-  color: #fff;
-  overflow: hidden;
-  /* Add subtle shadow to separate header from the rest of the page */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Header image scales responsively */
-.header-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  /* Reduce opacity so overlay text stands out and underlying text is subdued */
-  opacity: 0.4;
-}
-
-/* Overlay container for header text */
-/* Center the text over the header image and apply a translucent backdrop */
-.header-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 20px 30px;
-  /* Light translucent panel over header image for readability */
-  background: rgba(255, 255, 255, 0.75);
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  max-width: 90%;
-}
-
-    .header-content h1 {
+    body {
       margin: 0;
-      font-size: 2.8rem;
-      font-weight: 700;
-      line-height: 1.2;
-      color: #254d80;
-    }
-
-    .header-content p {
-      margin-top: 8px;
-      font-size: 1.1rem;
-      color: #4d608c;
-    }
-
-/* Cards section layout */
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 40px 20px;
-  flex-grow: 1;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.card {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  padding: 35px;
-  max-width: 360px;
-  text-align: center;
-  backdrop-filter: blur(6px);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-/* Elevate cards slightly on hover */
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-
-/* Colourful study-themed cards inspired by Studydrive */
-.card-green {
-  /* Fresh green gradient */
-  background: linear-gradient(135deg, #a8e063 0%, #56ab2f 100%);
-  color: #ffffff;
-}
-
-.card-purple {
-  /* Soft purple-pink gradient */
-  background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
-  color: #ffffff;
-}
-
-.card-green h2,
-.card-purple h2 {
-  color: #ffffff;
-}
-
-.card-green p,
-.card-purple p {
-  color: #f8f8f8;
-}
-
-/* White buttons inside colourful cards */
-.card-green .btn,
-.card-purple .btn {
-  background-color: #ffffff;
-  color: #254d80;
-  border: none;
-}
-
-.card-green .btn:hover,
-.card-purple .btn:hover {
-  background-color: #e6e6e6;
-  color: #254d80;
-}
-
-.card h2 {
-  margin-top: 0;
-  color: #254d80;
-  font-weight: 600;
-  font-size: 1.6rem;
-}
-
-.card p {
-  font-size: 1rem;
-  margin-bottom: 20px;
-  line-height: 1.6;
-  color: #444;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 28px;
-  background-color: #3f6ea3;
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.btn:hover {
-  background-color: #315781;
-  transform: translateY(-2px);
-}
-
-/* Motivational section styling */
-.motivation {
-  /* Soft gradient background echoing the site’s pastel theme */
-  background: linear-gradient(135deg, #eaf4ff 0%, #f7faff 100%);
-  border-radius: 16px;
-  padding: 40px 30px;
-  margin: 30px auto;
-  max-width: 800px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  text-align: center;
-}
-
-.motivation p {
-  margin: 0;
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: #254d80;
-  line-height: 1.4;
-}
-
-    /* Feature list styling inside cards */
-    .features {
-      list-style: none;
-      padding-left: 0;
-      margin-top: 0;
-      margin-bottom: 24px;
-      /* Align feature text to the left within the card so descriptions appear neat */
-      text-align: left;
-    }
-
-    .features li {
+      padding: 0;
+      /* Use a modern system font stack for a professional feel */
+      font-family: "Segoe UI", Tahoma, Helvetica, Arial, sans-serif;
+      /* Light pastel background reminiscent of modern study portals */
+      background-color: #f7faff;
+      color: #333;
       display: flex;
-      align-items: flex-start;
-      margin-bottom: 8px;
-      font-size: 0.9rem;
-      line-height: 1.4;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
-    .features li::before {
-      content: "\2022"; /* Unicode bullet point */
-      display: inline-block;
-      margin-right: 8px;
-      font-size: 1.2rem;
-      line-height: 1;
+    /* Header styles */
+    header {
+      position: relative;
+      text-align: center;
+      /* Provide a fallback colour that blends with the page background while the image loads */
+      background-color: #e7effc;
+      color: #fff;
+      overflow: hidden;
+      /* Add subtle shadow to separate header from the rest of the page */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
-    /* Set feature text and bullet colours for coloured cards */
-    .card-green .features li,
-    .card-purple .features li {
+    /* Header image scales responsively */
+    .header-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      /* Reduce opacity so overlay text stands out and underlying text is subdued */
+      opacity: 0.4;
+    }
+
+    /* Overlay container for header text */
+    /* Center the text over the header image and apply a translucent backdrop */
+    .header-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px 30px;
+      /* Light translucent panel over header image for readability */
+      background: rgba(255, 255, 255, 0.75);
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      max-width: 90%;
+    }
+
+        .header-content h1 {
+          margin: 0;
+          font-size: 2.8rem;
+          font-weight: 700;
+          line-height: 1.2;
+          color: #254d80;
+        }
+
+        .header-content p {
+          margin-top: 8px;
+          font-size: 1.1rem;
+          color: #4d608c;
+        }
+
+    /* Cards section layout */
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+      flex-grow: 1;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      padding: 35px;
+      max-width: 360px;
+      text-align: center;
+      backdrop-filter: blur(6px);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    /* Elevate cards slightly on hover */
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Colourful study-themed cards inspired by Studydrive */
+    .card-green {
+      /* Fresh green gradient */
+      background: linear-gradient(135deg, #a8e063 0%, #56ab2f 100%);
       color: #ffffff;
     }
 
-    .card-green .features li::before,
-    .card-purple .features li::before {
-      color: rgba(255, 255, 255, 0.9);
+    .card-purple {
+      /* Soft purple-pink gradient */
+      background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+      color: #ffffff;
     }
 
-    /* Feature colours for default (light) cards if needed */
-    .card:not(.card-green):not(.card-purple) .features li {
+    .card-green h2,
+    .card-purple h2 {
+      color: #ffffff;
+    }
+
+    .card-green p,
+    .card-purple p {
+      color: #f8f8f8;
+    }
+
+    /* White buttons inside colourful cards */
+    .card-green .btn,
+    .card-purple .btn {
+      background-color: #ffffff;
+      color: #254d80;
+      border: none;
+    }
+
+    .card-green .btn:hover,
+    .card-purple .btn:hover {
+      background-color: #e6e6e6;
+      color: #254d80;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: #254d80;
+      font-weight: 600;
+      font-size: 1.6rem;
+    }
+
+    .card p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      line-height: 1.6;
       color: #444;
     }
 
-    .card:not(.card-green):not(.card-purple) .features li::before {
-      color: #6d7c99;
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background-color: #3f6ea3;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
 
-/* Footer styles */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #f2f5fa;
-  font-size: 0.85rem;
-  color: #666;
+    .btn:hover {
+      background-color: #315781;
+      transform: translateY(-2px);
+    }
+
+    /* Motivational section styling */
+    .motivation {
+      /* Soft gradient background echoing the site’s pastel theme */
+      background: linear-gradient(135deg, #eaf4ff 0%, #f7faff 100%);
+      border-radius: 16px;
+      padding: 40px 30px;
+      margin: 30px auto;
+      max-width: 800px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+
+    .motivation p {
+      margin: 0;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #254d80;
+      line-height: 1.4;
+    }
+
+        /* Feature list styling inside cards */
+        .features {
+          list-style: none;
+          padding-left: 0;
+          margin-top: 0;
+          margin-bottom: 24px;
+          /* Align feature text to the left within the card so descriptions appear neat */
+          text-align: left;
+        }
+
+        .features li {
+          display: flex;
+          align-items: flex-start;
+          margin-bottom: 8px;
+          font-size: 0.9rem;
+          line-height: 1.4;
+        }
+
+        .features li::before {
+          content: "\2022"; /* Unicode bullet point */
+          display: inline-block;
+          margin-right: 8px;
+          font-size: 1.2rem;
+          line-height: 1;
+        }
+
+        /* Set feature text and bullet colours for coloured cards */
+        .card-green .features li,
+        .card-purple .features li {
+          color: #ffffff;
+        }
+
+        .card-green .features li::before,
+        .card-purple .features li::before {
+          color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Feature colours for default (light) cards if needed */
+        .card:not(.card-green):not(.card-purple) .features li {
+          color: #444;
+        }
+
+        .card:not(.card-green):not(.card-purple) .features li::before {
+          color: #6d7c99;
+        }
+
+    /* Footer styles */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f2f5fa;
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+/* Responsive layout adjustments for small screens */
+@media (max-width: 600px) {
+  /* Stack cards vertically on small screens */
+  .cards {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+  .card {
+    max-width: 100%;
+    margin: 0 auto 20px;
+    padding: 25px;
+  }
+  .header-content h1 {
+    font-size: 2rem;
+  }
+  .header-content p {
+    font-size: 1rem;
+  }
+  .motivation {
+    padding: 30px 20px;
+    margin: 20px auto;
+  }
+  .motivation p {
+    font-size: 1.3rem;
+  }
 }
